@@ -1,0 +1,49 @@
+<html>
+<style>
+body
+    {
+        height: 100%;
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+#container{
+            positon: absolute;
+            bottom: 9px;
+            left:10px;
+        }
+</style>
+<head>
+    <title>Mr.Harsha's Website</title>
+</head>
+<body background>
+<center><h1>Welcome to Harsha's Site!!</h1>
+<p>
+    Hello This is Harsha..
+    <br>
+    <p>
+    <h1>Know about Me:</h1>
+    <h1>LINKEDIN
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="50px" height="30px" ></h1>
+    <a href="https://www.linkedin.com/in/harsha-reddy-86b7b1210">LinkedIN</a>
+    <h1>FaceBook
+    <img src="https://icon-library.com/images/facebook-logo-icon/facebook-logo-icon-5.jpg"width="50px" height="40px"></h1>
+    <a href="https://www.facebook.com/profile.php?id=100073686582404">Facebook</a>
+    <p>Follow Me on Instagram</p>
+    <h1>InstaGram
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1025px-Instagram-Icon.png"width="50px" height="30px"></h1>
+    <a href="https://www.instagram.com/harsha.8050/">Instagram</a>
+    <p>Follow Me on Twitter </p>
+    <h1>Twitter
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png"width="50px" height="50px"></h1>
+    <a href="https://twitter.com/Harsha_7145">Twitter</a>
+    <h1>WHATS-APP
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png?w=360"width="50px" height="50px"</h1>
+    <p>Chat on Whats-app</p>
+    <a href="https://wa.me/8438087145">What's App Me </a>
+    <div class="container"><h1>Contact Me </h1>
+    <p>harsha31reddy@gmail.com</p><br>
+    <p>8438087145</p></div>
+</p></center>
+</body>
+</html>
