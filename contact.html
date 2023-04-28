@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <style>
+    /* Add your CSS code here */
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: #38b6ff;
+      outline: none;
+    }
+
+    button[type="submit"] {
+      background-color: #38b6ff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #00a3ff;
+    }
+  </style>
+</head>
+<body background="https://news.mediaheroes.com.au/hubfs/contact-page-design-media-heroes-banner.webp">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <form id="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required/>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <script>
+    // Add your JavaScript code here
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+      alert("Thanks for contacting us!");
+      form.reset();
+    });
+  </script>
+</body>
+</html>
