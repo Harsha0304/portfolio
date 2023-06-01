@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Team</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        }
+        .team-member.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .team-member img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+            transition: transform 0.3s ease-out;
+        }
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+        .team-member-info {
+            flex-grow: 1;
+        }
+        .team-member h3 {
+            font-size: 18px;
+            transition: color 0.3s ease-out;
+        }
+        .team-member:hover h3 {
+            color: blue;
+        }
+        .team-member p {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .social-icons {
+            display: flex;
+        }
+        .social-icons a {
+            margin-right: 10px;
+            color: #000;
+            transition: color 0.3s ease-out;
+        }
+        .social-icons a:hover {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Project Team</h1>
+        <div class="team-member">
+            <img src="img/Harsha.jpg" alt="Member 1">
+            <div class="team-member-info">
+                <h3>Harsha</h3>
+                <p>Role: Developer</p>
+                <p>Experience:Fresher</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/harsha-reddy-86b7b1210/">https://www.linkedin.com/in/harsha-reddy-86b7b1210/<i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+                    </div>
+</div>
+        <div class="team-member">
+            <img src="img/Harsha.jpg" alt="Member 2">
+            <div class="team-member-info">
+                <h3>Jane Smith</h3>
+                <p>Role: Designer</p>
+                <p>Experience: 3 years</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="img/Harsha.jpg" alt="Member 3">
+            <div class="team-member-info">
+                <h3>Mike Johnson</h3>
+                <p>Role: Project Manager</p>
+                <p>Experience: 7 years</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var teamMembers = document.querySelectorAll(".team-member");
+            
+            function animateTeamMembers() {
+                teamMembers.forEach(function(member, index) {
+                    setTimeout(function() {
+                        member.classList.add("active");
+                    }, index * 300);
+                });
+            }
+            
+            animateTeamMembers();
+        });
+    </script>
+</body>
+</html>
