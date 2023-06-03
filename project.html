@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Project Team</title>
+    <title>Project Team Members </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
         .team-member {
@@ -39,20 +39,18 @@
             font-size: 14px;
             margin-bottom: 5px;
         }
-        .social-icons {
-            display: flex;
+        .testimonial {
+            background-color: #f5f5f5;
+            padding: 10px;
+            margin-top: 10px;
         }
-        .social-icons a {
-            margin-right: 10px;
-            color: #000;
-            transition: color 0.3s ease-out;
-        }
-        .social-icons a:hover {
-            color: blue;
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 5px;
         }
     </style>
 </head>
-<body>
+<body background="img/background-project.jpg">
     <div class="container">
         <h1>Project Team</h1>
         <div class="team-member">
@@ -61,23 +59,19 @@
                 <h3>Harsha</h3>
                 <p>Role: Developer</p>
                 <p>Experience:Fresher</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/harsha-reddy-86b7b1210/">https://www.linkedin.com/in/harsha-reddy-86b7b1210/<i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
+                <div class="testimonial">
+                    <p>Harsha is an exceptional developer. His attention to detail and problem-solving skills have greatly contributed to the success of our project.</p>
                 </div>
-                    </div>
-</div>
+            </div>
+        </div>
         <div class="team-member">
             <img src="img/Harsha.jpg" alt="Member 2">
             <div class="team-member-info">
-                <h3>Jane Smith</h3>
-                <p>Role: Designer</p>
-                <p>Experience: 3 years</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
+                <h3>MADHUBABU K S</h3>
+                <p>Role:Teacher</p>
+                <p>Experience:18years</p>
+                <div class="testimonial">
+                    <p>"Jane's creative designs have brought our project to life. She has a keen eye for aesthetics and always delivers outstanding results."</p>
                 </div>
             </div>
         </div>
@@ -87,16 +81,13 @@
                 <h3>Mike Johnson</h3>
                 <p>Role: Project Manager</p>
                 <p>Experience: 7 years</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
+                <div class="testimonial">
+                    <p>"Mike's exceptional leadership and organizational skills have been instrumental in keeping our project on track and delivering it successfully."</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
             var teamMembers = document.querySelectorAll(".team-member");
