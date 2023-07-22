@@ -21,6 +21,7 @@
 
   <!-- Template Main CSS File -->
   <link href="./css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/contact.css">
 
   <style>
     #wave {
@@ -593,31 +594,75 @@
     </footer><!-- End  Footer -->
     <!-- Modal -->
     <div class="modal fade" id="ContactModal" tabindex="-1" aria-labelledby="ContactModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="ContactModalLabel">New message</h1>
+            <h1 class="modal-title fs-5" id="ContactModalLabel">Contact me........</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <form action="https://docs.google.com/forms/d/e/1FAIpQLSeLVHIR0AEKUZJnSdKR_OhPOb8CvJ69cd5kYhlrmpglfVbCrw/formResponse">
             <div class="modal-body">
-              <div class="mb-3">
-                <label for="name" class="col-form-label">Name:</label>
-                <input type="text" class="form-control" id="name" name="entry.2005620554" required>
+              <div class="row">
+                <div class="col-sm-6 contact100-more flex-col-c-m" style="background: rgba(0, 0, 0, .65) url('img/contact-bg.jpg'); background-blend-mode: darken; ">
+                  <div class="flex-w size1 p-b-47">
+                    <div class="txt1 p-r-25">
+                      <span class="lnr lnr-map-marker"></span>
+                    </div>
+                    <div class="flex-col size2">
+                      <span class="txt1 p-b-20">
+                        Address
+                      </span>
+                      <span class="txt2">
+                        Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
+                      </span>
+                    </div>
+                  </div>
+                  <div class="dis-flex size1 p-b-47">
+                    <div class="txt1 p-r-25">
+                      <span class="lnr lnr-phone-handset"></span>
+                    </div>
+                    <div class="flex-col size2">
+                      <span class="txt1 p-b-20">
+                        Lets Talk
+                      </span>
+                      <span class="txt3">
+                        +1 800 1236879
+                      </span>
+                    </div>
+                  </div>
+                  <div class="dis-flex size1 p-b-47">
+                    <div class="txt1 p-r-25">
+                      <span class="lnr lnr-envelope"></span>
+                    </div>
+                    <div class="flex-col size2">
+                      <span class="txt1 p-b-20">
+                        General Support
+                      </span>
+                      <span class="txt3">
+                        contact@example.com
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mb-3">
+                    <label for="name" class="col-form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" name="entry.2005620554" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="col-form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="entry.1045781291" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="col-form-label">Phone Number:</label>
+                    <input type="tel" class="form-control" id="phone" name="entry.1166974658" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="comments" class="col-form-label">Comments:</label>
+                    <textarea class="form-control" id="comments" name="entry.839337160" required></textarea>
+                  </div>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="email" class="col-form-label">Email:</label>
-                <input type="email" class="form-control" id="email" name="entry.1045781291" required>
-              </div>
-              <div class="mb-3">
-                <label for="phone" class="col-form-label">Phone Number:</label>
-                <input type="tel" class="form-control" id="phone" name="entry.1166974658" required>
-              </div>
-              <div class="mb-3">
-                <label for="comments" class="col-form-label">Comments:</label>
-                <textarea class="form-control" id="comments" name="entry.839337160" required></textarea>
-              </div>
-
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
