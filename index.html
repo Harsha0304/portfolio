@@ -18,10 +18,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
   <!-- Template Main CSS File -->
   <link href="./css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/contact.css">
 
   <style>
     #wave {
@@ -600,75 +600,61 @@
             <h1 class="modal-title fs-5" id="ContactModalLabel">Contact me........</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <form action="https://docs.google.com/forms/d/e/1FAIpQLSeLVHIR0AEKUZJnSdKR_OhPOb8CvJ69cd5kYhlrmpglfVbCrw/formResponse">
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-sm-6 contact100-more flex-col-c-m" style="background: rgba(0, 0, 0, .65) url('img/contact-bg.jpg'); background-blend-mode: darken; ">
-                  <div class="flex-w size1 p-b-47">
-                    <div class="txt1 p-r-25">
-                      <span class="lnr lnr-map-marker"></span>
-                    </div>
-                    <div class="flex-col size2">
-                      <span class="txt1 p-b-20">
-                        Address
-                      </span>
-                      <span class="txt2">
-                        Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
-                      </span>
-                    </div>
-                  </div>
-                  <div class="dis-flex size1 p-b-47">
-                    <div class="txt1 p-r-25">
-                      <span class="lnr lnr-phone-handset"></span>
-                    </div>
-                    <div class="flex-col size2">
-                      <span class="txt1 p-b-20">
-                        Lets Talk
-                      </span>
-                      <span class="txt3">
-                        +1 800 1236879
-                      </span>
+          <div class="modal-body contact-bg">
+            <div id="contact" class="contact-area section-padding">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-7">
+                    <div class="contact">
+                      <form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSeLVHIR0AEKUZJnSdKR_OhPOb8CvJ69cd5kYhlrmpglfVbCrw/formResponse">
+                        <div class="row">
+                          <div class="form-group col-md-6 pb-2">
+                            <input type="text" id="name" name="entry.2005620554" class="form-control" placeholder="Name" required="required">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <input type="email" id="email" name="entry.1045781291" class="form-control" placeholder="Email" required="required">
+                          </div>
+                          <div class="form-group col-md-12 pb-2">
+                            <input type="tel" id="phone" name="entry.1166974658" class="form-control" placeholder="Mobile Number with contry code e.g:-(+91..)" required="required">
+                          </div>
+                          <div class="form-group col-md-12 pb-2">
+                            <textarea rows="4" name="message" class="form-control" placeholder="Your Message" required="required"></textarea>
+                          </div>
+                          <div class="col-md-12 text-center">
+                            <button type="submit" value="Send message" name="submit" class="btn btn-contact-bg" title="Submit Your Message!">Send Message</button>
+                          </div>
+                        </div>
+                      </form>
                     </div>
                   </div>
-                  <div class="dis-flex size1 p-b-47">
-                    <div class="txt1 p-r-25">
-                      <span class="lnr lnr-envelope"></span>
+                  <!--- END COL -->
+                  <div class="col-lg-5">
+                    <div class="single_address">
+                      <i class="fa fa-map-marker"></i>
+                      <h4>My Address</h4>
+                      <p>3481 Melrose Place, Beverly Hills</p>
                     </div>
-                    <div class="flex-col size2">
-                      <span class="txt1 p-b-20">
-                        General Support
-                      </span>
-                      <span class="txt3">
-                        contact@example.com
-                      </span>
+                    <div class="single_address">
+                      <i class="fa fa-envelope"></i>
+                      <h4>Send your message</h4>
+                      <p>Info@example.com</p>
+                    </div>
+                    <div class="single_address">
+                      <i class="fa fa-phone"></i>
+                      <h4>Call me on</h4>
+                      <p>(+91) xxxxxxxxxx</p>
                     </div>
                   </div>
+                  <!--- END COL -->
                 </div>
-                <div class="col-sm-6">
-                  <div class="mb-3">
-                    <label for="name" class="col-form-label">Name:</label>
-                    <input type="text" class="form-control" id="name" name="entry.2005620554" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="email" class="col-form-label">Email:</label>
-                    <input type="email" class="form-control" id="email" name="entry.1045781291" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="phone" class="col-form-label">Phone Number:</label>
-                    <input type="tel" class="form-control" id="phone" name="entry.1166974658" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="comments" class="col-form-label">Comments:</label>
-                    <textarea class="form-control" id="comments" name="entry.839337160" required></textarea>
-                  </div>
-                </div>
+                <!--- END ROW -->
               </div>
+              <!--- END CONTAINER -->
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Send message</button>
-            </div>
-          </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
