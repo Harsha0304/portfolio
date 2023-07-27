@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Automation Control Panel</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .control-panel {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    .btn-toggle {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 30px;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: background-color 0.3s ease-in-out;
+    }
+    .btn-toggle:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+    .btn-on {
+      background-color: #28a745;
+      color: #fff;
+    }
+    .btn-off {
+      background-color: #dc3545;
+      color: #fff;
+    }
+    .fa {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="control-panel">
+    <h1 class="text-center mb-4">Home Automation Control Panel</h1>
+    <div class="d-grid">
+      <button class="btn-toggle btn-on" data-toggle="on">
+        <i class="fa fa-lightbulb"></i> Living Room Lights - On
+      </button>
+      <button class="btn-toggle btn-off" data-toggle="off">
+        <i class="fa fa-lightbulb"></i> Living Room Lights - Off
+      </button>
+      <button class="btn-toggle btn-on" data-toggle="on">
+        <i class="fa fa-fan"></i> Bedroom Fan - On
+      </button>
+      <button class="btn-toggle btn-off" data-toggle="off">
+        <i class="fa fa-fan"></i> Bedroom Fan - Off
+      </button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // JavaScript for the button toggle animations
+    const btnToggleElements = document.querySelectorAll('.btn-toggle');
+
+    btnToggleElements.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const isOn = btn.getAttribute('data-toggle') === 'on';
+        btn.setAttribute('data-toggle', isOn ? 'off' : 'on');
+        btn.textContent = isOn ? btn.textContent.replace('On', 'Off') : btn.textContent.replace('Off', 'On');
+        btn.classList.toggle('btn-on');
+        btn.classList.toggle('btn-off');
+      });
+    });
+  </script>
+</body>
+</html>
