@@ -1,411 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8">
 
+  <title>MY Team</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+    .whos-speaking-area .speakers {
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+      border: 1px solid #dee2e6;
+      border-radius: 6px;
+    }
 
-<title>MY Team</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<style type="text/css">
-    	.whos-speaking-area .speakers {
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-    border: 1px solid #dee2e6;
-    border-radius: 6px;
-}
-.whos-speaking-area .speakers:hover {
-    -webkit-box-shadow: 0 0 6px 5px #ddd;
-    box-shadow: 0 0 6px 5px #ddd;
-    border-radius: 6px;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-    border: 1px solid #dee2e6;
-}
-.whos-speaking-area .speakers .spk-img {
-    position: relative;
-}
-.whos-speaking-area .speakers .spk-img:before {
-    background: rgba(91, 69, 213, 0.8);
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-    z-index: 5;
-}
-.whos-speaking-area .speakers .spk-img:hover:before {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-}
-.whos-speaking-area .speakers .spk-img img {
-    width: 100%;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-}
-.whos-speaking-area .speakers .spk-img ul {
-    position: absolute;
-    display: inline-block;
-    top: 35%;
-    left: 40%;
-    width: 100px;
-    line-height: 3;
-    opacity: 0;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-}
-.whos-speaking-area .speakers .spk-img ul:before {
-    position: absolute;
-    content: "";
-    height: 110px;
-    width: 110px;
-    background: transparent;
-    top: -15%;
-    left: -15px;
-    border: 1px solid #fff;
-    -webkit-transform: rotate(44deg) scale(1.4);
-    -ms-transform: rotate(44deg) scale(1.4);
-    transform: rotate(44deg) scale(1.4);
-    opacity: 0;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-}
-.whos-speaking-area .speakers .spk-img ul li {
-    display: inline-block;
-    margin: 0 3px;
-    -webkit-transform: perspective(50px) rotatey(80deg);
-    transform: perspective(50px) rotatey(80deg);
-    -webkit-transition: all 0.5s ease 0.2s;
-    -o-transition: all 0.5s ease 0.2s;
-    transition: all 0.5s ease 0.2s;
-    margin: 0 5px;
-}
-.whos-speaking-area .speakers .spk-img ul li a i.fa {
-    color: rgba(255, 78, 0, 0.8);
-    font-size: 18px;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-    width: 28px;
-    color: #fff;
-    height: 28px;
-    line-height: 21px;
-    text-align: center;
-}
-.whos-speaking-area .speakers .spk-img ul li a i.fa:hover {
-    color: #cf057c;
-}
-.whos-speaking-area .speakers .spk-img ul li:nth-child(1) {
-    -webkit-transform: translate3d(-53px, -50px, 0);
-    transform: translate3d(-53px, -50px, 0);
-}
-.whos-speaking-area .speakers .spk-img ul li:nth-child(2) {
-    -webkit-transform: translate3d(53px, -50px, 0);
-    transform: translate3d(53px, -50px, 0);
-}
-.whos-speaking-area .speakers .spk-img ul li:nth-child(3) {
-    -webkit-transform: translate3d(-53px, 50px, 0);
-    transform: translate3d(-53px, 50px, 0);
-}
-.whos-speaking-area .speakers .spk-img ul li:nth-child(4) {
-    -webkit-transform: translate3d(53px, 50px, 0);
-    transform: translate3d(53px, 50px, 0);
-}
-.whos-speaking-area .speakers .spk-img:hover ul {
-    left: 35%;
-    opacity: 1;
-    z-index: 9;
-}
-.whos-speaking-area .speakers .spk-img:hover ul:before {
-    opacity: 1;
-    -webkit-transform: rotate(44deg) scale(1);
-    -ms-transform: rotate(44deg) scale(1);
-    transform: rotate(44deg) scale(1);
-}
-.whos-speaking-area .speakers .spk-img:hover ul li:nth-child(1),
-.whos-speaking-area .speakers .spk-img:hover ul li:nth-child(2),
-.whos-speaking-area .speakers .spk-img:hover ul li:nth-child(3),
-.whos-speaking-area .speakers .spk-img:hover ul li:nth-child(4) {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-.whos-speaking-area .speakers .spk-info {
-    text-align: center;
-    padding: 30px 0;
-}
-.whos-speaking-area .speakers .spk-info h3 {
-    color: #252525;
-    font-size: 20px;
-    line-height: 20px;
-    margin-bottom: 5px;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-    text-transform: capitalize;
-}
-.whos-speaking-area .speakers .spk-info h3:hover {
-    color: #4125dd;
-}
-.whos-speaking-area .speakers .spk-info p {
-    font-size: 15px;
-    margin-bottom: 0;
-    color: #656565;
-}
+    .whos-speaking-area .speakers:hover {
+      -webkit-box-shadow: 0 0 6px 5px #ddd;
+      box-shadow: 0 0 6px 5px #ddd;
+      border-radius: 6px;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+      border: 1px solid #dee2e6;
+    }
 
-.whos-speaking-area-two .title-text h2 {
-    color: #fff;
-}
+    .whos-speaking-area .speakers .spk-img {
+      position: relative;
+    }
 
-.whos-speaking-area-two .speakers {
-    position: relative;
-    overflow: hidden;
-}
-.whos-speaking-area-two .speakers:hover img {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
-}
-.whos-speaking-area-two .speakers img {
-    position: relative;
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
-    -webkit-transition: all 0.3s linear 0s;
-    -o-transition: all 0.3s linear 0s;
-    transition: all 0.3s linear 0s;
-}
-.whos-speaking-area-two .speakers .img-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    background: rgba(91, 69, 213, 0.9);
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-}
-.whos-speaking-area-two .speakers:hover .img-overlay {
-    opacity: 1;
-}
-.whos-speaking-area-two .speakers .name a {
-    position: absolute;
-    bottom: -20%;
-    left: 10%;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: capitalize;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-}
-.whos-speaking-area-two .speakers .name a:hover {
-    color: #cf057c;
-}
-.whos-speaking-area-two .speakers:hover .name a {
-    bottom: 10%;
-}
-.whos-speaking-area-two .speakers .social-icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    bottom: 23%;
-    left: 0;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-}
-.whos-speaking-area-two .speakers .social-icons li {
-    margin-right: 10px;
-}
-.whos-speaking-area-two .speakers .social-icons li a {
-    color: #fff;
-}
-.whos-speaking-area-two .speakers .social-icons li a:hover {
-    color: #252525;
-}
-.whos-speaking-area-two .speakers:hover .social-icons {
-    left: 27px;
-}
-ul {
-    list-style: outside none none;
-    margin: 0;
-    padding: 0;
-    outline: none;
-}
-.mb50 {
-    margin-bottom: 50px;
-}
-    </style>
+    .whos-speaking-area .speakers .spk-img:before {
+      background: rgba(91, 69, 213, 0.8);
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+      z-index: 5;
+    }
+
+    .whos-speaking-area .speakers .spk-img:hover:before {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+    }
+
+    .whos-speaking-area .speakers .spk-img img {
+      width: 100%;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+
+    .whos-speaking-area .speakers .spk-img ul {
+      position: absolute;
+      display: inline-block;
+      top: 35%;
+      left: 40%;
+      width: 100px;
+      line-height: 3;
+      opacity: 0;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+
+    .whos-speaking-area .speakers .spk-img ul:before {
+      position: absolute;
+      content: "";
+      height: 110px;
+      width: 110px;
+      background: transparent;
+      top: -15%;
+      left: -15px;
+      border: 1px solid #fff;
+      -webkit-transform: rotate(44deg) scale(1.4);
+      -ms-transform: rotate(44deg) scale(1.4);
+      transform: rotate(44deg) scale(1.4);
+      opacity: 0;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+
+    .whos-speaking-area .speakers .spk-img ul li {
+      display: inline-block;
+      margin: 0 3px;
+      -webkit-transform: perspective(50px) rotatey(80deg);
+      transform: perspective(50px) rotatey(80deg);
+      -webkit-transition: all 0.5s ease 0.2s;
+      -o-transition: all 0.5s ease 0.2s;
+      transition: all 0.5s ease 0.2s;
+      margin: 0 5px;
+    }
+
+    .whos-speaking-area .speakers .spk-img ul li a i.fa {
+      color: rgba(255, 78, 0, 0.8);
+      font-size: 18px;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+      width: 28px;
+      color: #fff;
+      height: 28px;
+      line-height: 21px;
+      text-align: center;
+    }
+
+    .whos-speaking-area .speakers .spk-img ul li a i.fa:hover {
+      color: #cf057c;
+    }
+
+    .whos-speaking-area .speakers .spk-img ul li:nth-child(1) {
+      -webkit-transform: translate3d(-53px, -50px, 0);
+      transform: translate3d(-53px, -50px, 0);
+    }
+
+    .whos-speaking-area .speakers .spk-img ul li:nth-child(2) {
+      -webkit-transform: translate3d(53px, -50px, 0);
+      transform: translate3d(53px, -50px, 0);
+    }
+
+    .whos-speaking-area .speakers .spk-img ul li:nth-child(3) {
+      -webkit-transform: translate3d(-53px, 50px, 0);
+      transform: translate3d(-53px, 50px, 0);
+    }
+
+    .whos-speaking-area .speakers .spk-img ul li:nth-child(4) {
+      -webkit-transform: translate3d(53px, 50px, 0);
+      transform: translate3d(53px, 50px, 0);
+    }
+
+    .whos-speaking-area .speakers .spk-img:hover ul {
+      left: 35%;
+      opacity: 1;
+      z-index: 9;
+    }
+
+    .whos-speaking-area .speakers .spk-img:hover ul:before {
+      opacity: 1;
+      -webkit-transform: rotate(44deg) scale(1);
+      -ms-transform: rotate(44deg) scale(1);
+      transform: rotate(44deg) scale(1);
+    }
+
+    .whos-speaking-area .speakers .spk-img:hover ul li:nth-child(1),
+    .whos-speaking-area .speakers .spk-img:hover ul li:nth-child(2),
+    .whos-speaking-area .speakers .spk-img:hover ul li:nth-child(3),
+    .whos-speaking-area .speakers .spk-img:hover ul li:nth-child(4) {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+
+    .whos-speaking-area .speakers .spk-info {
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    .whos-speaking-area .speakers .spk-info h3 {
+      color: #252525;
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 5px;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+      text-transform: capitalize;
+    }
+
+    .whos-speaking-area .speakers .spk-info h3:hover {
+      color: #4125dd;
+    }
+
+    .whos-speaking-area .speakers .spk-info p {
+      font-size: 15px;
+      margin-bottom: 0;
+      color: #656565;
+    }
+
+    .whos-speaking-area-two .title-text h2 {
+      color: #fff;
+    }
+
+    .whos-speaking-area-two .speakers {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .whos-speaking-area-two .speakers:hover img {
+      -webkit-transform: translate3d(0px, 0px, 0px);
+      transform: translate3d(0px, 0px, 0px);
+    }
+
+    .whos-speaking-area-two .speakers img {
+      position: relative;
+      -webkit-transform: translate3d(0px, 0px, 0px);
+      transform: translate3d(0px, 0px, 0px);
+      -webkit-transition: all 0.3s linear 0s;
+      -o-transition: all 0.3s linear 0s;
+      transition: all 0.3s linear 0s;
+    }
+
+    .whos-speaking-area-two .speakers .img-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      background: rgba(91, 69, 213, 0.9);
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+    }
+
+    .whos-speaking-area-two .speakers:hover .img-overlay {
+      opacity: 1;
+    }
+
+    .whos-speaking-area-two .speakers .name a {
+      position: absolute;
+      bottom: -20%;
+      left: 10%;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: capitalize;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+
+    .whos-speaking-area-two .speakers .name a:hover {
+      color: #cf057c;
+    }
+
+    .whos-speaking-area-two .speakers:hover .name a {
+      bottom: 10%;
+    }
+
+    .whos-speaking-area-two .speakers .social-icons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: absolute;
+      bottom: 23%;
+      left: 0;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+
+    .whos-speaking-area-two .speakers .social-icons li {
+      margin-right: 10px;
+    }
+
+    .whos-speaking-area-two .speakers .social-icons li a {
+      color: #fff;
+    }
+
+    .whos-speaking-area-two .speakers .social-icons li a:hover {
+      color: #252525;
+    }
+
+    .whos-speaking-area-two .speakers:hover .social-icons {
+      left: 27px;
+    }
+
+    ul {
+      list-style: outside none none;
+      margin: 0;
+      padding: 0;
+      outline: none;
+    }
+
+    .mb50 {
+      margin-bottom: 50px;
+    }
+  </style>
 </head>
+
 <body>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-<div class="whos-speaking-area speakers pad100">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-<div class="section-title text-center">
-<div class="title-text mb50">
-<h2>MY Team</h2>
-</div>
-</div>
-</div>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <div class="whos-speaking-area speakers pad100">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title text-center">
+            <div class="title-text mb50">
+              <h2>MY Team</h2>
+            </div>
+          </div>
+        </div>
 
-</div>
-<div class="row mb50"> 
-<div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
-<div class="speakers xs-mb30">
-<div class="spk-img">
-<img class="img-fluid" src="img/Members_Names/deepak_prajapti.jpg" alt="trainer-img" />
-<ul>
-<li>
-<a href="#"><i class="fa fa-twitter"></i></a>
-</li>
-<li>
-<a href="#"><i class="fa fa-camera"></i></a>
-</li>
-<li>
-<a href="#"><i class="fa fa-facebook"></i></a>
-</li>
-<li>
-<a href="#"><i class="fa fa-life-ring"></i></a>
-</li>
-</ul>
-</div>
-<div class="spk-info">
-<a href="Profiles/deepak_prajapati.html"><h3>Deepak Prajapti</h3></a>
-<p>Member</p>
-</div>
-</div>
-</div>
+      </div>
+      <div class="row mb50">
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+          <div class="speakers xs-mb30">
+            <div class="spk-img">
+              <img class="img-fluid" src="img/Members_Names/deepak_prajapti.jpg" alt="trainer-img" />
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-camera"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-life-ring"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="spk-info">
+              <a href="Profiles/deepak_prajapati.html">
+                <h3>Deepak Prajapti</h3>
+              </a>
+              <p>Member</p>
+            </div>
+          </div>
+        </div>
 
-<div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
-    <div class="speakers xs-mb30">
-    <div class="spk-img">
-    <img class="img-fluid" src="img/Members_Names/Rahul.jpg" alt="trainer-img" />
-    <ul>
-    <li>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    </li>
-    <li>
-    <a href="#"><i class="fa fa-camera"></i></a>
-    </li>
-    <li>
-    <a href="#"><i class="fa fa-facebook"></i></a>
-    </li>
-    <li>
-    <a href="#"><i class="fa fa-life-ring"></i></a>
-    </li>
-    </ul>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+          <div class="speakers xs-mb30">
+            <div class="spk-img">
+              <img class="img-fluid" src="img/Members_Names/Rahul.jpg" alt="trainer-img" />
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-camera"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-life-ring"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="spk-info">
+              <a href="Profiles/rahul_profile.html">
+                <h3>Bandi Rahul</h3>
+              </a>
+              <p>Team-Leader</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+          <div class="speakers xs-mb30">
+            <div class="spk-img">
+              <img class="img-fluid" src="img/Members_Names/rohith.jpg" alt="trainer-img" />
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-camera"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-life-ring"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="spk-info">
+              <a href="Profiles/Rohith_darshan.html">
+                <h3>Rohith</h3>
+              </a>
+              <p>Member</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="offset-2 no-gutter"></div>
+
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+          <div class="speakers xs-mb30">
+            <div class="spk-img">
+              <img class="img-fluid" src="img/Members_Names/Dileep_Pasam.jpg" alt="trainer-img" />
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-camera"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-life-ring"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="spk-info">
+              <a href="Profiles/dileep_profile.html">
+                <h3>Dileep_Pasam</h3>
+              </a>
+              <p>Member</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+          <div class="speakers">
+            <div class="spk-img">
+              <img class="img-fluid" src="img/Harsha.jpg" alt="trainer-img" />
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-camera"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-life-ring"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="spk-info">
+              <a href="Profiles/harsha_Profile.html">
+                <h3>Harsha</h3>
+              </a>
+              <p>Member</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="spk-info">
-    <a href="Profiles/rahul_profile.html"><h3>Bandi Rahul</h3></a>
-    <p>Team-Leader</p>
     </div>
-    </div>
-    </div>
-
-<div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
-<div class="speakers xs-mb30">
-<div class="spk-img">
-<img class="img-fluid" src="img/Members_Names/rohith.jpg" alt="trainer-img" />
-<ul>
-<li>
-<a href="#"><i class="fa fa-twitter"></i></a>
-</li>
-<li>
-<a href="#"><i class="fa fa-camera"></i></a>
-</li>
-<li>
-<a href="#"><i class="fa fa-facebook"></i></a>
-</li>
-<li>
-<a href="#"><i class="fa fa-life-ring"></i></a>
-</li>
-</ul>
-</div>
-<div class="spk-info">
-<a href="Profiles/Rohith_darshan.html"><h3>Rohith</h3></a>
-<p>Member</p>
-</div>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="offset-2 no-gutter"></div>
-
-<div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
-<div class="speakers xs-mb30">
-<div class="spk-img">
-<img class="img-fluid" src="img/Members_Names/Dileep_Pasam.jpg" alt="trainer-img" />
-<ul>
-<li>
-<a href="#"><i class="fa fa-twitter"></i></a>
-</li>
-<li>
-<a href="#"><i class="fa fa-camera"></i></a>
-</li>
-<li>
-<a href="#"><i class="fa fa-facebook"></i></a>
-</li>
-<li>
-<a href="#"><i class="fa fa-life-ring"></i></a>
-</li>
-</ul>
-</div>
-<div class="spk-info">
-<a href="Profiles/dileep_profile.html"><h3>Dileep_Pasam</h3></a>
-<p>Member</p>
-</div>
-</div>
-</div>
-
-
-<div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
-<div class="speakers">
-<div class="spk-img">
-<img class="img-fluid" src="img/Harsha.jpg" alt="trainer-img" />
-<ul>
-<li>
-<a href="#"><i class="fa fa-twitter"></i></a>
-</li>
-<li>
-<a href="#"><i class="fa fa-camera"></i></a>
-</li>
-<li>
-<a href="#"><i class="fa fa-facebook"></i></a>
-</li>
-<li>
-<a href="#"><i class="fa fa-life-ring"></i></a>
-</li>
-</ul>
-</div>
-<div class="spk-info">
-<a href="Profiles/harsha_Profile.html"><h3>Harsha</h3></a>
-<p>Member</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript">
-</script>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">
+  </script>
 </body>
+
 </html>
