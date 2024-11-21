@@ -3,39 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Badge Showcase</title>
+  <title>My Credly Badges</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .badges-section {
+      padding: 60px 20px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-header h1 {
+      font-size: 36px;
+      color: #343a40;
+    }
+
+    .section-header p {
+      color: #6c757d;
+      font-size: 16px;
+    }
+
+    .badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .badge-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      width: 200px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .badge-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
 </head>
 <body>
-  <div class="badge-container">
-    <!-- Badge 1 -->
-    <div class="badge">
-      <img src="Badages/aws-educate-getting-started-with-serverless.png" alt="AWS Educate - Getting Started with Serverless" />
-      <div class="badge-info">
-        <h3>AWS Educate - Getting Started with Serverless</h3>
-        <p>Learned the basics of serverless computing using AWS services.</p>
+
+  <!-- Badges Section -->
+  <section class="badges-section">
+    <div class="container">
+      <div class="section-header">
+        <h1>My Badges</h1>
+        <p>Explore my professional achievements displayed below.</p>
+      </div>
+      <div class="badge-container">
+        <!-- Badge 1 -->
+        <div class="badge-card">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="db188724-0c52-4704-bcce-81ee62a3c970" data-share-badge-host="https://www.credly.com"></div>
+          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        </div>
+
+        <!-- Badge 2 -->
+        <div class="badge-card">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="9c67f4da-432d-4feb-a5f9-3edc98601c24" data-share-badge-host="https://www.credly.com"></div>
+          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        </div>
+
+        <!-- Badge 6 -->
+        <div class="badge-card">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="cb9c1459-9e43-4807-aa30-e08fd8f0ac35" data-share-badge-host="https://www.credly.com"></div>
+          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        </div>
+
+        <!-- Badge 7 -->
+        <div class="badge-card">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="86bd6a7d-ee9c-4461-ba56-ab8fe5b475b4" data-share-badge-host="https://www.credly.com"></div>
+          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        </div>
+
+        <!-- Badge 8 -->
+        <div class="badge-card">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ad084c93-621e-4cd2-b441-1051eeeed0ab" data-share-badge-host="https://www.credly.com"></div>
+          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        </div>
+
+        <!-- Badge 3 -->
+        <div class="badge-card">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c1f83aff-b4e7-4440-8c24-3ba26359e14a" data-share-badge-host="https://www.credly.com"></div>
+          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        </div>
+
+        <!-- Badge 4 -->
+        <div class="badge-card">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="156159de-8738-4ab8-8066-0d2c9a5c3a85" data-share-badge-host="https://www.credly.com"></div>
+          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        </div>
+
+        <!-- Badge 5 -->
+        <div class="badge-card">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ea5c0ed6-e1b7-41f9-9b99-a2cfd3a91081" data-share-badge-host="https://www.credly.com"></div>
+          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Badge 2 -->
-    <div class="badge">
-      <img src="badge2.jpg" alt="Badge 2" />
-      <div class="badge-info">
-        <h3>Badge 2</h3>
-        <p>Description for Badge 2 goes here.</p>
-      </div>
-    </div>
-
-    <!-- Badge 3 -->
-    <div class="badge">
-      <img src="badge3.jpg" alt="Badge 3" />
-      <div class="badge-info">
-        <h3>Badge 3</h3>
-        <p>Description for Badge 3 goes here.</p>
-      </div>
-    </div>
-
-    <!-- Add more badge divs as needed -->
-  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

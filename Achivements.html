@@ -1,133 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Achievements</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
       background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
     }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 200vh;
+    .achievements-section {
+      padding: 60px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-header h1 {
+      font-size: 36px;
+      color: #343a40;
+    }
+
+    .section-header p {
+      color: #6c757d;
+      font-size: 16px;
     }
 
     .achievement-card {
       background-color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      text-align: center;
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-5px);
     }
 
     .achievement-card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
-      margin-bottom: 5px;
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .achievement-card .card-body {
+      padding: 20px;
     }
 
     .achievement-card h4 {
-      margin-top: 10px;
-      margin-bottom: 10px;
       color: #343a40;
+      font-size: 22px;
+      margin-bottom: 10px;
     }
 
     .achievement-card p {
       color: #6c757d;
-      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 1.6;
     }
 
-    .achievement-card:hover img {
-      transform: rotate(360deg);
-      transition: transform 1s ease-in-out;
+    .achievement-card .btn {
+      background-color: #007bff;
+      color: white;
+      border-radius: 20px;
+      padding: 5px 15px;
+      font-size: 14px;
     }
 
-    .achievement-card:hover:before {
-      transform: scaleX(1.2);
-      transition: transform 0.5s;
-    }
-
-    .achievement-card:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to right, #ff7e5f, #feb47b);
-      opacity: 0.8;
-      z-index: -1;
-      transform-origin: bottom left;
-      transform: skewY(-4deg);
-      transition: transform 0.5s;
-    }
-
-    .animated {
-      animation-duration: 1s;
-      animation-fill-mode: both;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .achievement-card .btn:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
-
 <body>
 
-  <div class="container">
-    <div class="achievement-card animated fadeInUp">
-      <img src="img/WSA_Participation_Certificate.jpg"Achievement" class="img-fluid">
-      <center><h4>WorldSkill Asia 2023</h4></center>
-      <p>
-        🌐 World Skills Asia Abu Dhabi 2023: A Journey of Learning and Pride! 🏆
-
-        I am thrilled to share my incredible experience representing India and NTTF Bangalore at the World Skills Asia Competition in Abu Dhabi 2023, where I am in the field of IT Network and System Administrator.
-        
-        Heartfelt congratulations to the winners in my skill category! Competing on the global stage for the first time was a profound learning experience, and I am proud to have made connections with passionate individuals from diverse fields.
-      </p>
-        <p>🙏 Gratitude to NTTF
-        I extend my sincere thanks to NTTF (Nettur Technical Training Foundation) for selecting me to showcase my skills on this prestigious platform.🤝
-        </p>
-        <p>
-        👏 Special Thanks to VEDC:
-        A special shoutout to VEDC (Vocational Education and Development Center) for their unwavering support, guidance, and ensuring our comfort during the entire journey. Your dedication made a significant difference in our experience. 🌟
-        </p>
-        <p>
-        🌟 Appreciation for ACTVET and ADNEC:
-        I want to express my gratitude to ACTVET and ADNEC for making this event possible and providing an unparalleled competitive experience. Your support and care created an environment where skills could shine and talents could flourish. 🙌
-        </p>  
-        <p>
-        🏅 A Journey of Growth and Connection:
-        Participating in the World Skills Asia Competition was not just a competition but a journey of personal and professional growth. The connections made and the lessons learned will stay with me throughout my career. 🌱
-        </p>
-        <p>
-        🌍 Thank You, Abu Dhabi!
-        Thank you, Abu Dhabi, for hosting this incredible event. Your hospitality and the seamless execution of the competition made it a memorable experience for all participants.
-      </p>
+  <!-- Achievements Section -->
+  <section class="achievements-section">
+    <div class="container">
+      <div class="section-header">
+        <h1>Achievements</h1>
+        <p>Showcasing some of my proudest accomplishments and experiences.</p>
+      </div>
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="achievement-card">
+            <img src="img/WSA_Participation_Certificate.jpg" alt="World Skills Asia" class="img-fluid">
+            <div class="card-body">
+              <h4>WorldSkill Asia 2023</h4>
+              <p>
+                Represented India in IT Network and System Administration at World Skills Asia 2023 in Abu Dhabi. An enriching global stage experience of learning and growth.
+              </p>
+              <a href="#details" class="btn">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Add more achievement cards here if needed -->
+      </div>
     </div>
-  </div>
+  </section>
 
+  <!-- Optional JS Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
-
 </html>
