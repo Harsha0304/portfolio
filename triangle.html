@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        /* Apply a full-screen gradient background with animation */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff0066, #ff6600, #00cc66, #0066ff);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        /* Keyframes for the background animation */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Centering the content on the page */
+        .content {
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to My Project</h1>
+        <p>Explore the dynamic background animation!</p>
+    </div>
+</body>
+</html>
