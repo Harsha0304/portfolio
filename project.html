@@ -4,180 +4,228 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Harsha's Projects</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     body {
-      background-color: #f5f7fa;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
       font-family: 'Segoe UI', sans-serif;
     }
     .section-title {
       font-size: 2rem;
       font-weight: 600;
       margin-top: 40px;
-      color: #333;
+      color: #f9f9f9;
+      border-bottom: 2px solid #00bcd4;
+      display: inline-block;
     }
     .card {
+      background-color: rgba(255, 255, 255, 0.08);
       border: none;
       border-radius: 1rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
     }
     .category-icon {
       font-size: 1.5rem;
-      color: #0d6efd;
+      color: #00bcd4;
+    }
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      padding-bottom: 4rem;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .navbar-brand {
+      color: #00bcd4;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
-<div class="container py-5">
-  <h1 class="text-center mb-4 fw-bold">🚀 Harsha's Project Portfolio</h1>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">🚀 Harsha's Projects</a>
+  </div>
+</nav>
 
-  <!-- DevOps & IT Projects -->
-  <h3 class="section-title"><i class="fas fa-server category-icon"></i> DevOps & IT Infrastructure</h3>
-  <div class="row row-cols-1 row-cols-md-2 g-4" data-aos="fade-up">
+<!-- Main Content -->
+<div class="container py-5">
+  <!-- Section: DevOps -->
+  <h3 class="section-title" data-aos="fade-right"><i class="fas fa-server category-icon"></i> DevOps & IT Infrastructure</h3>
+  <div class="row row-cols-1 row-cols-md-2 g-4 mt-2" data-aos="fade-up">
     <div class="col">
       <div class="card p-3">
         <h5>IT Asset Management System (Django)</h5>
-        <p>Tracks laptops, phones, accessories & network devices with login, dashboards, bulk import/export.</p>
+        <p>Tracks devices, network gear & accessories with employee mapping, dashboards, bulk import/export.</p>
       </div>
     </div>
     <div class="col">
       <div class="card p-3">
         <h5>System Infrastructure Monitoring</h5>
-        <p>Windows service monitoring Wi-Fi, IPs, apps with web dashboard and user auth (CTCS project).</p>
+        <p>Windows service to track Wi-Fi, IPs, hostname, software & hardware info with a web dashboard.</p>
       </div>
     </div>
     <div class="col">
       <div class="card p-3">
         <h5>Virtualization Setup</h5>
-        <p>On-prem Proxmox + DevStack + OpenStack configuration for cloud & VM simulation.</p>
+        <p>Proxmox + DevStack/OpenStack based on-prem cloud simulation for VMs.</p>
       </div>
     </div>
   </div>
 
-  <!-- RPA / UiPath -->
-  <h3 class="section-title"><i class="fas fa-robot category-icon"></i> RPA / UiPath Projects</h3>
-  <div class="row row-cols-1 row-cols-md-2 g-4" data-aos="fade-up">
+  <!-- Section: UiPath -->
+  <h3 class="section-title mt-5" data-aos="fade-right"><i class="fas fa-robot category-icon"></i> RPA / UiPath Projects</h3>
+  <div class="row row-cols-1 row-cols-md-2 g-4 mt-2" data-aos="fade-up">
     <div class="col">
       <div class="card p-3">
         <h5>UI Path Calculator</h5>
         <a href="https://github.com/Harsha0304/UI-Path-Calculator-" target="_blank">GitHub Repo</a>
-        <p>Automates calculator functions like add/subtract using UiPath.</p>
+        <p>Automates basic calculator operations using UiPath.</p>
       </div>
     </div>
     <div class="col">
       <div class="card p-3">
         <h5>Notepad Automation</h5>
         <a href="https://github.com/Harsha0304/Notepad-Automation-UI-Path" target="_blank">GitHub Repo</a>
-        <p>Automates typing and saving text in Notepad using UiPath Studio.</p>
+        <p>Automates writing & saving content in Notepad.</p>
       </div>
     </div>
     <div class="col">
       <div class="card p-3">
         <h5>ACME Data Extraction</h5>
         <a href="https://github.com/Harsha0304/Acme-Data-Extraction" target="_blank">GitHub Repo</a>
-        <p>Data scraping and form automation from ACME Test Website.</p>
+        <p>Automates data scraping from ACME website.</p>
       </div>
     </div>
     <div class="col">
       <div class="card p-3">
         <h5>Website Bulk Data Automation</h5>
         <a href="https://github.com/Harsha0304/Website-Bulk-Data-Automation" target="_blank">GitHub Repo</a>
-        <p>Bulk data scraping and input automation via UiPath.</p>
+        <p>Scrapes multiple websites and processes bulk data.</p>
       </div>
     </div>
     <div class="col">
       <div class="card p-3">
         <h5>My First RPA</h5>
         <a href="https://github.com/Harsha0304/My-First-RPA" target="_blank">GitHub Repo</a>
-        <p>Beginner-level automation to get started with UiPath.</p>
+        <p>Starter project for learning UiPath Studio.</p>
       </div>
     </div>
   </div>
 
-  <!-- Web / Business Projects -->
-  <h3 class="section-title"><i class="fas fa-globe category-icon"></i> Web & Business Projects</h3>
-  <div class="row row-cols-1 row-cols-md-2 g-4" data-aos="fade-up">
+  <!-- Section: Web -->
+  <h3 class="section-title mt-5" data-aos="fade-right"><i class="fas fa-globe category-icon"></i> Web & Business Projects</h3>
+  <div class="row row-cols-1 row-cols-md-2 g-4 mt-2" data-aos="fade-up">
     <div class="col">
       <div class="card p-3">
         <h5>Visitor Management System</h5>
-        <p>Flask app with OTP, document verification and visitor logs for CTCS.</p>
+        <p>OTP + doc verification system with visitor tracking (Flask).</p>
       </div>
     </div>
     <div class="col">
       <div class="card p-3">
         <h5>Cam Soori Tea Shop Website</h5>
-        <p>Static website with Zomato, Instagram links and review system.</p>
+        <p>Static page with Zomato/Instagram + review collection UI.</p>
       </div>
     </div>
     <div class="col">
       <div class="card p-3">
         <h5>College Placement Portal</h5>
-        <p>Placement management system for students and recruiters. (Owner: Janani)</p>
+        <p>Manages placement drives, student-company mapping.</p>
       </div>
     </div>
     <div class="col">
       <div class="card p-3">
         <h5>GramKart</h5>
-        <p>Agritech ecommerce project to help farmers sell products online.</p>
+        <p>Agritech platform with product catalog and dashboard.</p>
       </div>
     </div>
   </div>
 
-  <!-- AI Projects -->
-  <h3 class="section-title"><i class="fas fa-brain category-icon"></i> AI & Automation Projects</h3>
-  <div class="row row-cols-1 row-cols-md-2 g-4" data-aos="fade-up">
+  <!-- Section: AI -->
+  <h3 class="section-title mt-5" data-aos="fade-right"><i class="fas fa-brain category-icon"></i> AI & Automation Projects</h3>
+  <div class="row row-cols-1 row-cols-md-2 g-4 mt-2" data-aos="fade-up">
     <div class="col">
       <div class="card p-3">
-        <h5>AI Chatbot for Supplier Queries</h5>
-        <p>LangGraph-based chatbot with DB querying and summarization using open-source LLMs.</p>
+        <h5>Supplier Chatbot (LangGraph)</h5>
+        <p>Smart chatbot with DB query and summarization using LLMs.</p>
       </div>
     </div>
     <div class="col">
       <div class="card p-3">
-        <h5>Movidius GPT Inference</h5>
-        <p>GPT model runs only if Intel Movidius NCS is plugged in.</p>
+        <h5>Movidius NCS GPT App</h5>
+        <p>GPT inference runs only if Intel Movidius stick is detected.</p>
       </div>
     </div>
     <div class="col">
       <div class="card p-3">
         <h5>n8n Video Automation</h5>
-        <p>Automated DevOps content to videos with 2D/3D voice-over using n8n.</p>
+        <p>Turns Excel content into narrated DevOps videos using n8n.</p>
       </div>
     </div>
     <div class="col">
       <div class="card p-3">
-        <h5>Custom ChatGPT App</h5>
-        <p>Single-user chatbot with custom interface and open-source GPT integration.</p>
+        <h5>ChatGPT-like Single User App</h5>
+        <p>Simple chatbot UI for interacting with GPT locally.</p>
       </div>
     </div>
   </div>
 
-  <!-- Entertainment / Fun -->
-  <h3 class="section-title"><i class="fas fa-film category-icon"></i> Media & Cybersecurity</h3>
-  <div class="row row-cols-1 row-cols-md-2 g-4" data-aos="fade-up">
+  <!-- Section: Media -->
+  <h3 class="section-title mt-5" data-aos="fade-right"><i class="fas fa-film category-icon"></i> Media & Cybersecurity</h3>
+  <div class="row row-cols-1 row-cols-md-2 g-4 mt-2" data-aos="fade-up">
     <div class="col">
       <div class="card p-3">
-        <h5>Vijay Movie Catalog (Flask)</h5>
-        <p>Local video player with login, MSSQL DB, Amazon-style UI, screen record block attempt.</p>
+        <h5>Thalapathy Vijay Movie App</h5>
+        <p>Flask video player + MSSQL + screen record prevention attempt.</p>
       </div>
     </div>
     <div class="col">
       <div class="card p-3">
         <h5>Cybersecurity Awareness Game</h5>
-        <p>Game built with Python/Unity to teach phishing, passwords, and safe browsing.</p>
+        <p>Built using Python/Unity to teach online safety practices.</p>
       </div>
     </div>
   </div>
 
 </div>
 
+<!-- Footer -->
+<footer>
+  Made with ❤️ by Harsha S| <a href="https://github.com/Harsha0304" target="_blank">GitHub</a>
+</footer>
+
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+<script>AOS.init();</script>
+
 </body>
 </html>
