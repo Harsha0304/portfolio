@@ -1,333 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="cansat" />
-        <meta name="author" content="cansat" />
-        <title>Projects</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <style>
-            /* Add custom styles for hover and modal effects */
-            .portfolio-item {
-                position: relative;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            .portfolio-item:hover {
-                transform: scale(1.05);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            }
-            .portfolio-item img {
-                border-radius: 8px;
-                transition: transform 0.3s ease;
-            }
-            .portfolio-item:hover img {
-                transform: scale(1.05);
-            }
-            .modal-content {
-                border-radius: 8px;
-                transition: transform 0.3s ease;
-            }
-            .portfolio-modal-title {
-                font-size: 2rem;
-                font-weight: bold;
-                color: #3a3a3a;
-            }
-            .divider-custom-line {
-                background-color: #f4f4f4;
-            }
-            .portfolio-item-caption-content {
-                transition: opacity 0.3s ease;
-            }
-            .portfolio-item:hover .portfolio-item-caption-content {
-                opacity: 1;
-            }
-            /* Additional responsive tweaks */
-            @media (max-width: 768px) {
-                .portfolio-item {
-                    margin-bottom: 2rem;
-                }
-            }
-        </style>
-    </head>
-    <!-- <style>body { background-image: url('https://img.pikbest.com/wp/202342/light-color-texture-background-dimmed-bokeh-abstract-colorful-red-defocused_9945102.jpg!w700wp'); }</style> -->
-    
-    <style>
-        body {
-          background-image: url('https://c4.wallpaperflare.com/wallpaper/374/757/216/abstract-lines-low-poly-material-style-wallpaper-preview.jpg');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-        }
-      </style>
-      
-      <!-- <style>
-        html, body {
-          height: 600%;
-          margin: 0;
-        }
-      
-        body {
-          background-image: url('https://c4.wallpaperflare.com/wallpaper/374/757/216/abstract-lines-low-poly-material-style-wallpaper-preview.jpg');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-        }
-      </style> -->
-      
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harsha's Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f7fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 40px;
+      color: #333;
+    }
+    .card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .category-icon {
+      font-size: 1.5rem;
+      color: #0d6efd;
+    }
+  </style>
+</head>
+<body>
 
-    <body id="page-section-heading">
-        <section class="page-section portfolio" id="acheivements">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Projects</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Portfolio Item 1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto card" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                            <img class="img-fluid card-img-top" src="assets/img/Digital_Noticeboard.jpg" alt="..." />
-                            <div class="card-body">
-                                <h4 class="card-title text-center">Digital-Noticeboard</h4>
-                                <p class="card-text text-center">A wireless LED notice board system for easy communication.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto card" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                            <img class="img-fluid card-img-top" src="assets/img/Urushya.jpg" alt="..." />
-                            <div class="card-body">
-                                <h4 class="card-title text-center">URUSHYA</h4>
-                                <p class="card-text text-center">A small tracking device that uses IoT technology for locating belongings.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto card" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                            <img class="img-fluid card-img-top" src="assets/img/Home_Automation.jpg" alt="..." />
-                            <div class="card-body">
-                                <h4 class="card-title text-center">Home-Automation</h4>
-                                <p class="card-text text-center">Automate your home with remote control via IoT.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 4-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto card" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                            <img class="img-fluid card-img-top" src="assets/img/Medfix.png" alt="..." />
-                            <div class="card-body">
-                                <h4 class="card-title text-center">Medfix</h4>
-                                <p class="card-text text-center">Track medicine stock and patient medication requirements.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 5-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto card" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                            <img class="img-fluid card-img-top" src="assets/img/logo-png.png" alt="..." />
-                            <div class="card-body">
-                                <h4 class="card-title text-center">CTCS</h4>
-                                <p class="card-text text-center">A system for managing and tracking technical issues.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 6-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto card" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                            <img class="img-fluid card-img-top" src="assets/img/open cloud.png" alt="..." />
-                            <div class="card-body">
-                                <h4 class="card-title text-center">Open Cloud </h4>
-                                <p class="card-text text-center">I’ve created a home-based open cloud using OpenStack and DevStack, with a Netflix-like movie server.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Designed and Developed by &copy; Harsha</small></div>
-        </div>
+<div class="container py-5">
+  <h1 class="text-center mb-4 fw-bold">🚀 Harsha's Project Portfolio</h1>
 
-        <!-- Portfolio Modals-->
-        <!-- Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Digital Notice Board</h2>
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/Digital_Noticeboard.jpg" alt="..." />
-                                    <p class="mb-4">A wireless LED notice board system that communicates data through Wi-Fi, ensuring easy information dissemination across spaces.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i> Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- DevOps & IT Projects -->
+  <h3 class="section-title"><i class="fas fa-server category-icon"></i> DevOps & IT Infrastructure</h3>
+  <div class="row row-cols-1 row-cols-md-2 g-4" data-aos="fade-up">
+    <div class="col">
+      <div class="card p-3">
+        <h5>IT Asset Management System (Django)</h5>
+        <p>Tracks laptops, phones, accessories & network devices with login, dashboards, bulk import/export.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card p-3">
+        <h5>System Infrastructure Monitoring</h5>
+        <p>Windows service monitoring Wi-Fi, IPs, apps with web dashboard and user auth (CTCS project).</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card p-3">
+        <h5>Virtualization Setup</h5>
+        <p>On-prem Proxmox + DevStack + OpenStack configuration for cloud & VM simulation.</p>
+      </div>
+    </div>
+  </div>
 
-        <!-- Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">URUSHYA</h2>
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/Urushya.jpg" alt="..." />
-                                    <p class="mb-4">A small tracking device that uses IoT technology to locate lost belongings with a real-time tracking feature.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i> Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Home Automation</h2>
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/Home_Automation.jpg" alt="..." />
-                                    <p class="mb-4">Automate your home using IoT technology to control appliances remotely via smartphone applications.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i> Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 4-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Medfix</h2>
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/Medfix.png" alt="..." />
-                                    <p class="mb-4">Track your medicine stock and requirements of patients using this system.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i> Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 5-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">CTCS</h2>
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/logo-png.png" alt="..." />
-                                    <p class="mb-4">A system for managing technical issues and tracking their resolution with user-friendly features.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i> Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 6-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Open Cloud</h2>
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/Project6.jpg" alt="..." />
-                                    <p class="mb-4">I have created an open cloud infrastructure at home, using OpenStack and DevStack to configure a setup similar to Amazon and Netflix, with a movie server for self-hosted media streaming and virtualization. </p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i> Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+  <!-- RPA / UiPath -->
+  <h3 class="section-title"><i class="fas fa-robot category-icon"></i> RPA / UiPath Projects</h3>
+  <div class="row row-cols-1 row-cols-md-2 g-4" data-aos="fade-up">
+    <div class="col">
+      <div class="card p-3">
+        <h5>UI Path Calculator</h5>
+        <a href="https://github.com/Harsha0304/UI-Path-Calculator-" target="_blank">GitHub Repo</a>
+        <p>Automates calculator functions like add/subtract using UiPath.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card p-3">
+        <h5>Notepad Automation</h5>
+        <a href="https://github.com/Harsha0304/Notepad-Automation-UI-Path" target="_blank">GitHub Repo</a>
+        <p>Automates typing and saving text in Notepad using UiPath Studio.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card p-3">
+        <h5>ACME Data Extraction</h5>
+        <a href="https://github.com/Harsha0304/Acme-Data-Extraction" target="_blank">GitHub Repo</a>
+        <p>Data scraping and form automation from ACME Test Website.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card p-3">
+        <h5>Website Bulk Data Automation</h5>
+        <a href="https://github.com/Harsha0304/Website-Bulk-Data-Automation" target="_blank">GitHub Repo</a>
+        <p>Bulk data scraping and input automation via UiPath.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card p-3">
+        <h5>My First RPA</h5>
+        <a href="https://github.com/Harsha0304/My-First-RPA" target="_blank">GitHub Repo</a>
+        <p>Beginner-level automation to get started with UiPath.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Web / Business Projects -->
+  <h3 class="section-title"><i class="fas fa-globe category-icon"></i> Web & Business Projects</h3>
+  <div class="row row-cols-1 row-cols-md-2 g-4" data-aos="fade-up">
+    <div class="col">
+      <div class="card p-3">
+        <h5>Visitor Management System</h5>
+        <p>Flask app with OTP, document verification and visitor logs for CTCS.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card p-3">
+        <h5>Cam Soori Tea Shop Website</h5>
+        <p>Static website with Zomato, Instagram links and review system.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card p-3">
+        <h5>College Placement Portal</h5>
+        <p>Placement management system for students and recruiters. (Owner: Janani)</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card p-3">
+        <h5>GramKart</h5>
+        <p>Agritech ecommerce project to help farmers sell products online.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Projects -->
+  <h3 class="section-title"><i class="fas fa-brain category-icon"></i> AI & Automation Projects</h3>
+  <div class="row row-cols-1 row-cols-md-2 g-4" data-aos="fade-up">
+    <div class="col">
+      <div class="card p-3">
+        <h5>AI Chatbot for Supplier Queries</h5>
+        <p>LangGraph-based chatbot with DB querying and summarization using open-source LLMs.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card p-3">
+        <h5>Movidius GPT Inference</h5>
+        <p>GPT model runs only if Intel Movidius NCS is plugged in.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card p-3">
+        <h5>n8n Video Automation</h5>
+        <p>Automated DevOps content to videos with 2D/3D voice-over using n8n.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card p-3">
+        <h5>Custom ChatGPT App</h5>
+        <p>Single-user chatbot with custom interface and open-source GPT integration.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Entertainment / Fun -->
+  <h3 class="section-title"><i class="fas fa-film category-icon"></i> Media & Cybersecurity</h3>
+  <div class="row row-cols-1 row-cols-md-2 g-4" data-aos="fade-up">
+    <div class="col">
+      <div class="card p-3">
+        <h5>Vijay Movie Catalog (Flask)</h5>
+        <p>Local video player with login, MSSQL DB, Amazon-style UI, screen record block attempt.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card p-3">
+        <h5>Cybersecurity Awareness Game</h5>
+        <p>Game built with Python/Unity to teach phishing, passwords, and safe browsing.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
 </html>
